@@ -1,14 +1,19 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:task_flutter_test/core/data/api_service.dart';
+import 'package:task_flutter_test/core/data/models/result_model.dart';
 import 'package:task_flutter_test/view/screens/main_screen.dart';
 
 part 'chapter_event.dart';
 part 'chapter_state.dart';
 
 class ChapterBloc extends Bloc<ChapterEvent, ChapterState> {
-  ChapterBloc() : super(ChapterInitial()) {
-    on<ChapterEvent>((event, emit) {
-      // TODO: implement event handler
+  final ApiService apiService;
+  ChapterBloc(this.apiService) : super(ChapterInitial()) {
+    on<ChapterEvent>((event, emit) async {
+      emit(ChapterStateLoading());
+      final _chapters = await apiService.getChapters();
+      emit(ChapterStateLoaded(_chapters));
     });
   }
 }

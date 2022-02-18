@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
+import 'package:task_flutter_test/core/data/api_service.dart';
 
 class ChaptersData {
   String? title;

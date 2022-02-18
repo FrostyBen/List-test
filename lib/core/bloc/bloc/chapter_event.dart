@@ -4,8 +4,8 @@ part of 'chapter_bloc.dart';
 abstract class ChapterEvent {}
 
 class GetChapter extends ChapterEvent {
-  final String title;
-  final String chapter;
+  final ApiService _apiService;
 
-  GetChapter(this.title, this.chapter);
+  GetChapter(this._apiService);
+  Object? get props => [_apiService];
 }

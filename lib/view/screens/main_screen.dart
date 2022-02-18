@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:task_flutter_test/core/bloc/bloc/chapter_bloc.dart';
 import 'package:task_flutter_test/view/models/message.dart';
 import 'package:task_flutter_test/view/widgets/check_point.dart';
 
@@ -87,19 +89,30 @@ class MainScreen extends StatelessWidget {
           child: Text('Карьерный навигатор'),
         ),
       ),
-      body: CustomScrollView(
-        slivers: [
-         
-          SliverAnimatedList(
-            initialItemCount: listMsg.length,
-            itemBuilder: ((context, index, animation) {
-              return Transform.scale(
-                scale: animation.value,
-                child: CheckPoint(titleItem: listMsg[index]),
-              );
-            }),
-          ),
-        ],
+      body: BlocBuilder<ChapterBloc, ChapterState>(
+        builder: (context, state) {
+          if (state is ChapterStateLoading) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+          if (state is ChapterStateLoaded) {
+            return CustomScrollView(
+              slivers: [
+                SliverAnimatedList(
+                  initialItemCount: state.chaptersData.title!.length,
+                  itemBuilder: ((context, index, animation) {
+                    return Transform.scale(
+                      scale: animation.value,
+                      child: CheckPoint(titleItem: state.chaptersData.chapters),
+                    );
+                  }),
+                ),
+              ],
+            );
+          }
+          return Container();
+        },
       ),
     );
   }

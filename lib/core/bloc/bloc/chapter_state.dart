@@ -5,12 +5,17 @@ abstract class ChapterState {}
 
 class ChapterInitial extends ChapterState {}
 
-class ChapterStateLoading extends ChapterState {}
+class ChapterStateLoading extends ChapterState {
+  Object? get props => [];
+}
 
-class ChapterStateError extends ChapterState {}
+class ChapterStateError extends ChapterState {
+  Object? get props => [];
+}
 
 class ChapterStateLoaded extends ChapterState {
-  final MainScreen mainScreen;
+  final ChaptersData chaptersData;
 
-  ChapterStateLoaded(this.mainScreen);
+  ChapterStateLoaded(this.chaptersData);
+  Object? get props => [chaptersData];
 }
