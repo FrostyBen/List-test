@@ -81,9 +81,11 @@ class ApiService {
             }
         ]
     }
+    
+    
 ]''';
-  Future<ChaptersData> getChapters() async {
-    return ChaptersData.fromJson(
+  Future<List<ChaptersData>> getChapters() async {
+    return ChaptersData.getListMap(
       jsonDecode(jsonString),
     );
   }

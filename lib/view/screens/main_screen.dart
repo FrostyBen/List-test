@@ -8,79 +8,80 @@ import '../models/title.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({Key? key}) : super(key: key);
-  List<Titles> listMsg = [
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Теория'),
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Практика'),
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Тесты'),
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Тесты'),
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Тесты'),
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Тесты'),
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Тесты'),
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Тесты'),
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Тесты'),
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Тесты'),
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Сертификат'),
-    Titles(chapters: [
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-      Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
-    ], title: 'Тесты'),
-  ];
+  final bool checkBoxValue = true;
+  // List<Titles> listMsg = [
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Теория'),
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Практика'),
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Тесты'),
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Тесты'),
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Тесты'),
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Тесты'),
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Тесты'),
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Тесты'),
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Тесты'),
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Тесты'),
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Сертификат'),
+  //   Titles(chapters: [
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //     Message(date: DateTime.now(), text: 'Глава 1.1 - 1.3 ISTQB'),
+  //   ], title: 'Тесты'),
+  //];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,12 +100,18 @@ class MainScreen extends StatelessWidget {
           if (state is ChapterStateLoaded) {
             return CustomScrollView(
               slivers: [
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Text('Ваша программа составлена'),
+                  ),
+                ),
                 SliverAnimatedList(
-                  initialItemCount: state.chaptersData.title!.length,
+                  initialItemCount: state.chaptersData.length,
                   itemBuilder: ((context, index, animation) {
                     return Transform.scale(
                       scale: animation.value,
-                      child: CheckPoint(titleItem: state.chaptersData.title),
+                      child: CheckPoint(item: state.chaptersData[index]),
                     );
                   }),
                 ),

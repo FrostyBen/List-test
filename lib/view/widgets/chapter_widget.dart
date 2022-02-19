@@ -9,58 +9,42 @@ import '../models/title.dart';
 
 class ChapterWidget extends StatelessWidget {
   const ChapterWidget({Key? key, required this.messageItem}) : super(key: key);
-  final List<Chapters>? messageItem;
+  final Chapters messageItem;
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<ChapterBloc>(
-      create: (BuildContext context) =>
-          ChapterBloc(ApiService())..add(ChapterEventLoad()),
-      child: BlocBuilder<ChapterBloc, ChapterState>(
-        builder: (context, state) {
-          if (state is ChapterStateLoaded) {
-            return Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-          if (state is ChapterStateLoaded) {
-            return Row(
-              children: [
-                const SizedBox(
-                  height: 20,
-                  width: 20,
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blueGrey,
-                    ),
-                  ),
+    return Padding(
+      padding: const EdgeInsets.only(left: 20),
+      child: Row(
+        children: [
+          const SizedBox(
+            height: 20,
+            width: 20,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.blueGrey,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(3),
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.8,
+              decoration: BoxDecoration(
+                border: Border.all(width: 2),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: [
+                    Text(messageItem.dateTime.toString() + messageItem.text!),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Container(
-                    // width: MediaQuery.of(context).size.width * 0.8,
-                    decoration: BoxDecoration(
-                      border: Border.all(width: 2),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        children: [
-                          Text(state.chaptersData.chapters.toString()),
-                        ],
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            );
-          }
-
-          return Container(
-            child: Text('sadasd'),
-          );
-        },
+              ),
+            ),
+          )
+        ],
       ),
     );
   }

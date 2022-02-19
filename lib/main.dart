@@ -14,14 +14,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme:
-          ThemeData(primaryColor: Colors.purple, brightness: Brightness.dark),
-      title: 'test app',
-      home: BlocProvider<ChapterBloc>(
-        create: (BuildContext context) =>
-            ChapterBloc(ApiService())..add(ChapterEventLoad()),
-        child: MainScreen(),
+    return BlocProvider<ChapterBloc>(
+      create: (BuildContext context) =>
+          ChapterBloc(ApiService())..add(ChapterEventLoad()),
+      child: MaterialApp(
+        theme:
+            ThemeData(primaryColor: Colors.purple, brightness: Brightness.dark),
+        title: 'test app',
+        home: MainScreen(),
       ),
     );
   }

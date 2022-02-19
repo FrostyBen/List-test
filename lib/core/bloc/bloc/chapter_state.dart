@@ -14,7 +14,7 @@ class ChapterStateError extends ChapterState {
 }
 
 class ChapterStateLoaded extends ChapterState {
-  final ChaptersData chaptersData;
+  final List<ChaptersData> chaptersData;
 
   ChapterStateLoaded(this.chaptersData);
   Object? get props => [chaptersData];

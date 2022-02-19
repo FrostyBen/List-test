@@ -8,40 +8,37 @@ import 'package:task_flutter_test/view/widgets/chapter_widget.dart';
 import '../models/title.dart';
 
 class CheckPoint extends StatelessWidget {
-  const CheckPoint({Key? key, required this.titleItem}) : super(key: key);
-  final String? titleItem;
+  const CheckPoint({Key? key, required this.item}) : super(key: key);
+  final ChaptersData item;
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<ChapterBloc>(
-      create: (BuildContext context) =>
-          ChapterBloc(ApiService())..add(ChapterEventLoad()),
-      child: BlocBuilder<ChapterBloc, ChapterState>(builder: (context, state) {
-        if (state is ChapterStateLoaded) {
-          return Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Card(
-                elevation: 20,
-                child: Text(state.chaptersData.chapters.toString()),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ListView.builder(
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: ((context, index) {
-                  return ChapterWidget(
-                    messageItem: state.chaptersData.chapters,
-                  );
-                }),
-                itemCount: state.chaptersData.chapters!.length,
-              ),
-            ],
-          );
-        }
-        return Container();
-      }),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Container(
+          height: 30,
+          child: Card(
+            elevation: 20,
+            child: Text(item.title!),
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        ListView.builder(
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          itemBuilder: ((context, index) {
+            return ChapterWidget(
+              messageItem: item.chapters![index],
+            );
+          }),
+          itemCount: item.chapters!.length,
+        ),
+        SizedBox(
+          height: 20,
+        )
+      ],
     );
   }
 }
