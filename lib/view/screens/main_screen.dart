@@ -104,7 +104,7 @@ class MainScreen extends StatelessWidget {
                   itemBuilder: ((context, index, animation) {
                     return Transform.scale(
                       scale: animation.value,
-                      child: CheckPoint(titleItem: state.chaptersData.chapters),
+                      child: CheckPoint(titleItem: state.chaptersData.title),
                     );
                   }),
                 ),

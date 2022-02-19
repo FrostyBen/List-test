@@ -9,11 +9,12 @@ import '../models/title.dart';
 
 class CheckPoint extends StatelessWidget {
   const CheckPoint({Key? key, required this.titleItem}) : super(key: key);
-  final List<Chapters>? titleItem;
+  final String? titleItem;
   @override
   Widget build(BuildContext context) {
     return BlocProvider<ChapterBloc>(
-      create: (BuildContext context) => ChapterBloc(ApiService()),
+      create: (BuildContext context) =>
+          ChapterBloc(ApiService())..add(ChapterEventLoad()),
       child: BlocBuilder<ChapterBloc, ChapterState>(builder: (context, state) {
         if (state is ChapterStateLoaded) {
           return Column(

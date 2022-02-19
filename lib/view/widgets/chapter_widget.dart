@@ -13,7 +13,8 @@ class ChapterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<ChapterBloc>(
-      create: (BuildContext context) => ChapterBloc(ApiService()),
+      create: (BuildContext context) =>
+          ChapterBloc(ApiService())..add(ChapterEventLoad()),
       child: BlocBuilder<ChapterBloc, ChapterState>(
         builder: (context, state) {
           if (state is ChapterStateLoaded) {

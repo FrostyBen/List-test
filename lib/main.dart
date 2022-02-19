@@ -18,10 +18,9 @@ class MyApp extends StatelessWidget {
       theme:
           ThemeData(primaryColor: Colors.purple, brightness: Brightness.dark),
       title: 'test app',
-      home: BlocProvider(
-        create: (context) => ChapterBloc(
-          ApiService(),
-        ),
+      home: BlocProvider<ChapterBloc>(
+        create: (BuildContext context) =>
+            ChapterBloc(ApiService())..add(ChapterEventLoad()),
         child: MainScreen(),
       ),
     );
