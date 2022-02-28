@@ -10,23 +10,23 @@ class ApiService {
         "chapters": [
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             },
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             },
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             },
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             },
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             }
         ]
     },
@@ -35,23 +35,23 @@ class ApiService {
         "chapters": [
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             },
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             },
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             },
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             },
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             }
         ]
     },
@@ -60,15 +60,15 @@ class ApiService {
         "chapters": [
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             },
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             },
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             }
         ]
     },
@@ -77,7 +77,7 @@ class ApiService {
         "chapters": [
             {
                 "dateTime": "2022...",
-                "text": "главы..."
+                "text": "Главы 1.1 - 1.3 ISTQB"
             }
         ]
     }

@@ -26,6 +26,7 @@ class ChapterWidget extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(width: 10,),
           Padding(
             padding: const EdgeInsets.all(3),
             child: Container(

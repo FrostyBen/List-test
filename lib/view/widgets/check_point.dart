@@ -15,15 +15,26 @@ class CheckPoint extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Container(
-          height: 30,
-          child: Card(
-            elevation: 20,
-            child: Text(item.title!),
+        Center(
+          
+          child: Container(
+            
+          
+           
+            width: MediaQuery.of(context).size.width *0.91,
+            height: 40,
+            child: Card(
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
+              elevation: 10,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(10, 7, 0, 0),
+                child: Text(item.title!),
+              ),
+            ),
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 10,
         ),
         ListView.builder(
           shrinkWrap: true,
