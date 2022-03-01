@@ -15,7 +15,10 @@ class ChapterStateError extends ChapterState {
 
 class ChapterStateLoaded extends ChapterState {
   final List<ChaptersData> chaptersData;
+  final bool checkboxValue;
 
-  ChapterStateLoaded(this.chaptersData);
+  ChapterStateLoaded(this.chaptersData, this.checkboxValue);
   Object? get props => [chaptersData];
+
+
 }

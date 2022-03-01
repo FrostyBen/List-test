@@ -10,10 +10,11 @@ part 'chapter_state.dart';
 class ChapterBloc extends Bloc<ChapterEvent, ChapterState> {
   final ApiService apiService;
   ChapterBloc(this.apiService) : super(ChapterInitial()) {
-    on<ChapterEvent>((event, emit) async {
+    on<ChapterEventLoad>((event, emit) async {
       emit(ChapterStateLoading());
       final _chapters = await apiService.getChapters();
-      emit(ChapterStateLoaded(_chapters));
+      var _checkBoxValue = false;
+      emit(ChapterStateLoaded(_chapters,_checkBoxValue));
     });
   }
 }

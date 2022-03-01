@@ -6,3 +6,6 @@ abstract class ChapterEvent {}
 class ChapterEventLoad extends ChapterEvent {
   Object? get props => [];
 }
+class CheckBoxEvent extends ChapterEvent{
+  Object? get props =>[];
+}

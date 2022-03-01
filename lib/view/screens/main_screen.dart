@@ -115,6 +115,17 @@ class MainScreen extends StatelessWidget {
                     );
                   }),
                 ),
+                SliverToBoxAdapter(
+                  child: CheckboxListTile(
+                    controlAffinity: ListTileControlAffinity.leading,
+                    value: checkBoxValue,
+                    onChanged: (newValue){
+                      state.chaptersData;
+                    },
+                    title: Text('Согласен получать уведомления от StrimQA'),
+                   
+                  ),
+                )
               ],
             );
           }
